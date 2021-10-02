@@ -34,7 +34,7 @@
                 <div class="lead" style="text-align: justify;" id="fg">
                     Le principe des traits est de permettre de
                     contourner les limites imposées par l'héritage
-                    simple de html. Le but est de permettre de créer
+                    simple de php. Le but est de permettre de créer
                     de nouvelles méthodes et de nouvelles propriétés
                     que l'on pourra ajouter à nos différentes classes
                     de manière horizontale.<br>
@@ -45,7 +45,7 @@
                     <div class="card" style="width: 50rem;  background-color: rgb(132, 211, 213);">
                         <div class="card-body">
                             <p class="card-text lead" id="fg">
-                                &lt;?html <br>
+                                &lt;?php <br>
                                 trait Rechargeable{<br>
                                 public $energy = 100;<br>
                                 public function recharger(){<br>
@@ -63,7 +63,7 @@
                     <div class="card" style="width: 50rem; background-color: rgb(132, 211, 213);">
                         <div class="card-body">
                             <p class="card-text lead" id="fg">
-                                &lt;?html<br>
+                                &lt;?php<br>
                                 class Pile extends Battery{<br>
                                 use Rechargeable;<br>
                                 }<br>
@@ -79,7 +79,7 @@
                     Ce système de trait apporte un problème de conflit.
                     En effet que se passe-t-il si 2 traits importés ont des
                     méthodes similaires ?<br>
-                    html a prévu le coup et il est possible de définir
+                    php a prévu le coup et il est possible de définir
                     quel trait utiliser pour certaines méthodes.<br>
 
                     <div class="card" style="width: 50rem;   background-color: rgb(132, 211, 213);" id="card">
@@ -98,7 +98,7 @@
                     <div class="card" style="width: 50rem;  background-color: rgb(132, 211, 213);">
                         <div class="card-body">
                             <p class="card-text lead" id="fg">
-                                &lt;?html <br>
+                                &lt;?php <br>
                                 class MaClass{ <br>
                                 use A,B{<br>
                                 A::fonction1 insteadof B; <br>
@@ -157,7 +157,7 @@
                     <div class="card" style="width: 50rem; background-color: rgb(132, 211, 213);"">
                     <div class=" card-body">
                         <p class="card-text lead" id="fg">
-                            &lt;?html<br>
+                            &lt;?php<br>
                             //déclaration du trait<br>
                             trait MonTrait<br>
                             {<br>

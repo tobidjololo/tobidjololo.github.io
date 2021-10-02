@@ -45,7 +45,7 @@
                 des opérations applicables aux objets
                 déclaration d'une classe <br>
                 Pour pouvoir manipuler des objets, il est essentiel de définir des
-                classes, c'est-à-dire définir la structure d'un objet. Avec html, cette
+                classes, c'est-à-dire définir la structure d'un objet. Avec php, cette
                 définition se fait de la manière suivante : <br>
                 <div class="card" style="width: 50rem;background-color: rgb(132, 211, 213);">
                     <div class="card-body">
@@ -135,7 +135,7 @@
                         </p>
                     </div>
                 </div>
-                <h5 class="lead" style="font-weight: 400;text-decoration:underline;font-family:'Poppins';color:#004aad;"> La méthodes html constructeur </h5>
+                <h5 class="lead" style="font-weight: 400;text-decoration:underline;font-family:'Poppins';color:#004aad;"> La méthodes php constructeur </h5>
                 La méthode constructeur ou plus simplement le constructeur d’une
                 classe est une méthode qui va être appelée (exécutée)
                 automatiquement à chaque fois qu’on va instancier une classe. <br>
@@ -181,17 +181,17 @@
                 </div>
                 On déclare un constructeur de classe en utilisant la syntaxe
                 function <span class="ch">__construct</span>. Il faut bien comprendre ici que le
-                html va rechercher cette méthode lors de la création d’un nouvel
+                php va rechercher cette méthode lors de la création d’un nouvel
                 objet et va automatiquement l’exécuter si elle est trouvée.
                 Nous allons utiliser notre constructeur pour initialiser certaines
                 propriétés de nos objets dont nous pouvons avoir besoin
                 immédiatement ou pour lesquelles il fait du sens de les initialiser
                 immédiatement.<br>
-                <h5 class="lead" style="font-weight: 400;text-decoration:underline;font-family:'Poppins';color:#004aad;">La méthodes html destructeur</h5>
+                <h5 class="lead" style="font-weight: 400;text-decoration:underline;font-family:'Poppins';color:#004aad;">La méthodes php destructeur</h5>
                 De la même façon, on va également pouvoir définir une méthode
                 destructeur ou plus simplement un destructeur de classe.
                 La méthode destructeur va permettre de nettoyer les ressources
-                avant que html ne libère l’objet de la mémoire.
+                avant que php ne libère l’objet de la mémoire.
                 Ici, vous devez bien comprendre que les variables-objets, comme
                 n’importe quelle autre variable « classique », ne sont actives que
                 durant le temps d’exécution du script puis sont ensuite détruites.
@@ -201,11 +201,11 @@
                 à jour ou fermer des connexions à une base de donnée.
                 Dans ces cas-là, on va pouvoir effectuer ces opérations dans le
                 destructeur puisque la méthode destructeur va être appelée
-                automatiquement par le html juste avant qu’un objet ne soit
+                automatiquement par le php juste avant qu’un objet ne soit
                 détruit.
                 Il est difficile d’expliquer concrètement l’intérêt d’un destructeur
                 ici à des personnes qui n’ont pas une connaissance poussée du
-                html. Pas d’inquiétude donc si vous ne comprenez pas
+                php. Pas d’inquiétude donc si vous ne comprenez pas
                 immédiatement l’intérêt d’une telle méthode, on pourra illustrer
                 cela de manière plus concrète lorsqu’on parlera des bases de
                 données. <br>
@@ -239,7 +239,7 @@
                 <div class="col-lg-6 col-md-12 col-sm-12">
                     <h5 id="ta" class="obj">EXERCICE</h5>
                     <p class="lead" id="fg">
-                        Fabriquons maintenant un objet simple en html. Ecrivons un
+                        Fabriquons maintenant un objet simple en php. Ecrivons un
                         objet représentant un étudiant avec
                         ses données : <br>
                         — identifiant<br>
@@ -256,7 +256,7 @@
                     <div class="card" style="width: 50rem;background-color: rgb(132, 211, 213);">
                         <div class="card-body" id="fg">
                             <p class="card-text lead">
-                                /** Classe Etudiant en html */ <br>
+                                /** Classe Etudiant en php */ <br>
                                 class Etudiant{<br>
                                 /** Identification unique d'un etudiant */<br>
                                 protected $etudiant_id;<br>

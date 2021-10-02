@@ -22,7 +22,7 @@
                 <ul class="nav nav-pills">
                     <li class="nav-item"><a href="./index.html" class="nav-link" aria-current="page" id="conv">Accueil</a></li>
                     <li class="nav-item act"><a href="./index.html#trouver" class="nav-link" id="conv">Concept</a></li>
-                    <li class="nav-item"><a href="./A_propoS.html" class="nav-link" id="conv">A propos de Groupe-4</a></li>
+                    <li class="nav-item"><a href="./A_propoS.php" class="nav-link" id="conv">A propos de Groupe-4</a></li>
                 </ul>
             </header>
         </div>
@@ -66,7 +66,7 @@
                     par la classe C ?<br>
                     Ce problème est connu sous le nom du « problème du diamant » et
                     est la raison principale pour laquelle la plupart des langages
-                    de programmation orientés objets (dont le html) ne permettent
+                    de programmation orientés objets (dont le php) ne permettent
                     pas à une classe d’étendre deux autres classes.<br>
                     En revanche, il ne va y avoir aucun problème par
                     rapport à l’implémentation par une classe de
@@ -87,11 +87,11 @@
                     utilisant « interface » à la place de « classe ».
                     Par exemple, si on crée une interface nommée Utilisateur,
                     on enregistrera le fichier d’interface sous
-                    le nom utiilsateur.interface.html par convention.<br>
+                    le nom utiilsateur.interface.php par convention.<br>
                     <div class="card" style="width: 50rem;  background-color: rgb(132, 211, 213);">
                         <div class="card-body">
                             <p class="card-text" id="fg" style="text-align: justify;">
-                                &lt;?html <br>
+                                &lt;?php <br>
                                 interface Utilisateur<br>
                                 {<br>
                                 public const ABONNEMENT = 15;<br>
@@ -112,7 +112,7 @@
                     <div class="card" style="width: 50rem;">
                         <div class="card-body">
                             <p class="card-text" id="fg" style="text-align: justify;  background-color: rgb(132, 211, 213);">
-                                &lt;?html<br>
+                                &lt;?php<br>
                                 class Abonne implements Utilisateur<br>
                                 {<br>
                                 protected $user_name;<br>
@@ -152,7 +152,7 @@
                     <div class="card" style="width: 50rem;">
                         <div class="card-body">
                             <p class="card-text" id="fg" style="text-align: justify;   background-color: rgb(132, 211, 213);">
-                                &lt;?html<br>
+                                &lt;?php<br>
                                 class Admin implements Utilisateur<br>
                                 {<br>
                                 protected $user_name;<br>
@@ -217,18 +217,18 @@
                         <div class="card-body">
                             <p class="card-text" id="fg" style="text-align: justify; background-color: rgb(132, 211, 213);">
                                 &lt;!DOCTYPE html/>;<br>
-                                &lt;html><br>
+                                &lt;php><br>
                                 &lt;head>;<br>
-                                &lt;title>;Cours html & MySQL&lt;/title>;<br>
+                                &lt;title>;Cours php & MySQL&lt;/title>;<br>
                                 &lt;meta charset="utf-8">;<br>
                                 &lt;link rel="stylesheet" href="cours.css"><br>
                                 &lt;/head><br>
                                 &lt;body><br>
                                 &lt;h1>Titre principal&lt;/h1><br>
-                                &lt;html<br>
-                                require 'classes/utilisateur.interface.html';<br>
-                                require 'classes/admin.class.html';<br>
-                                require 'classes/abonne.class.html';<br>
+                                &lt;php<br>
+                                require 'classes/utilisateur.interface.php';<br>
+                                require 'classes/admin.class.php';<br>
+                                require 'classes/abonne.class.php';<br>
 
                                 $pierre = new Admin('Pierre', 'abcdef', 'Sud');<br>
                                 $mathilde = new Admin('Math', 123456, 'Nord');<br>
@@ -253,7 +253,7 @@
                                 ?><br>
                                 &lt;p&lt;Un paragraphe&lt;/p>;<br>
                                 &lt;/body><br>
-                                &lt;/html>
+                                &lt;/php>
                             </p>
                         </div>
                     </div>
@@ -280,7 +280,7 @@
                         <div class="card" style="width: 50rem;  background-color: rgb(132, 211, 213);">
                             <div class="card-body">
                                 <p class="card-text lead" style="text-align: justify;" id="fg">
-                                    &lt;html<br>
+                                    &lt;php<br>
                                     interface Int1{<br>
                                     public function f1();<br>
                                     }<br>
