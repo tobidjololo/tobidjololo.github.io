@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<?php
+include_once 'header.php';
+?>
+
+<body>
+    <div class="container" style=" border-left: solid 2px rgb(132, 211, 213);border-right:solid 2px rgb(132, 211, 213);">
+        <div class="container" id="bbg">
+            <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                    <img src="files/img/Gtr.png" alt="logo" width="32px" height="32px">
+                    <span class="fs-4">roupe-4</span>
+                </a>
+
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a href="./index.php" class="nav-link" aria-current="page" id="conv">Accueil</a></li>
+                    <li class="nav-item act"><a href="./index.php#trouver" class="nav-link" id="conv">Concept</a></li>
+                    <li class="nav-item"><a href="./A_propoS.php" class="nav-link" id="conv">A propos de Groupe-4</a></li>
+                </ul>
+            </header>
+        </div>
+
+
+        <div style="text-align:center;margin-top:20px;margin-bottom:20px;">
+            <h5 id="ta" class="obj">CONCEPT DE TRAIT</h5>
+            <div class="container">
+                <div class="lead" style="text-align: justify;" id="fg">
+                    Le principe des traits est de permettre de
+                    contourner les limites imposées par l'héritage
+                    simple de PHP. Le but est de permettre de créer
+                    de nouvelles méthodes et de nouvelles propriétés
+                    que l'on pourra ajouter à nos différentes classes
+                    de manière horizontale.<br>
+                    <h5 class="lead" style="font-weight: 400;text-decoration:underline;font-family:'Poppins';color:#004aad;">Fonctionnement de base</h5>
+                    Les traits s'écrivent un peu comme une
+                    class (attention il n'est cependant pas
+                    possible de les instancier) <br>
+                    <div class="card" style="width: 50rem;  background-color: rgb(132, 211, 213);">
+                        <div class="card-body">
+                            <p class="card-text lead" id="fg">
+                                &lt;?php <br>
+                                trait Rechargeable{<br>
+                                public $energy = 100;<br>
+                                public function recharger(){<br>
+                                $this-&gt;energy = 100;<br>
+                                }<br>
+                                }<br>
+                                ?><br>
+                            </p>
+                        </div>
+                    </div>
+                    Le trait permet de définir des
+                    méthodes et des propriétés que
+                    l'on va pouvoir réutiliser. On peut
+                    ensuite ajouter ce trait aux classes souhaitées: <br>
+                    <div class="card" style="width: 50rem; background-color: rgb(132, 211, 213);">
+                        <div class="card-body">
+                            <p class="card-text lead" id="fg">
+                                &lt;?php<br>
+                                class Pile extends Battery{<br>
+                                use Rechargeable;<br>
+                                }<br>
+                                ?><br>
+                            </p>
+                        </div>
+                    </div>
+                    Cela aura pour effet de rajouter les méthodes du
+                    trait au sein de la class Pile.
+                    Il est possible d'utiliser plusieurs traits.<br>
+                    use Rechargeable,Explosable,Vidable;
+                    Attention aux conflits
+                    Ce système de trait apporte un problème de conflit.
+                    En effet que se passe-t-il si 2 traits importés ont des
+                    méthodes similaires ?<br>
+                    PHP a prévu le coup et il est possible de définir
+                    quel trait utiliser pour certaines méthodes.<br>
+
+                    <div class="card" style="width: 50rem;   background-color: rgb(132, 211, 213);" id="card">
+                        <div class="card-body">
+                            <p class="card-text lead" id="fg">
+                                class MaClass{<br>
+                                use A,B{<br>
+                                B::fonction1 insteadof A;<br>
+                                A::fonction2 insteadof B;<br>
+                                }<br>
+                            </p>
+                        </div>
+                    </div>
+
+                    Il est aussi possible d'importer une fonction en la renommant à la volée.<br>
+                    <div class="card" style="width: 50rem;  background-color: rgb(132, 211, 213);">
+                        <div class="card-body">
+                            <p class="card-text lead" id="fg">
+                                &lt;?php <br>
+                                class MaClass{ <br>
+                                use A,B{<br>
+                                A::fonction1 insteadof B; <br>
+                                B::fonction1 as fonction1_B <br>
+                                }<br>
+                                }<br>
+                                ?><br>
+                            </p>
+                        </div>
+                    </div>
+                    Ceci aura pour effet d'importer
+                    la fonction1 du trait A et d'importer
+                    la fonction1 du trait B en l'appellant fonction1_B.<br>
+                    <h5 class="lead" style="font-weight: 400;text-decoration:underline;font-family:'Poppins';color:#004aad;">Fonctionnement de base</h5>
+                    Un trait peut être composé d'autres traits.
+                    Le fonctionnement ne diffère pas de ce que l'ont vient de voir.<br>
+                    <div class="card" style="width: 50rem; background-color: rgb(132, 211, 213);">
+                        <div class="card-body">
+                            <p class="card-text lead" id="fg">
+                                trait C{<br>
+                                A,B;<br>
+                                }<br>
+                            </p>
+                        </div>
+                    </div>
+                    <h5 class="lead" style="font-weight: 400;text-decoration:underline;font-family:'Poppins';color:#004aad;">Fonctionnement de base</h5>
+                    L'utilisation des traits permet de
+                    décomposer le code de nos class en "comportements" et
+                    ainsi permettre d'éviter d'avoir des classes contenant
+                    des milliers de lignes de codes. Ils permettent aussi
+                    de rendre le code réutilisable à travers différentes
+                    class qui ont un comportement similaire sans avoir un parent commun.
+                    Mais il faudra quand même prendre en considération
+                    quelques inconvénients. Si une classe utilise beaucoup
+                    de traits, localiser une méthode peut rapidement devenir un véritable enfer.
+                    Les traits doivent donc être utilisé avec parcimonie pour
+                    résoudre des problèmes simples, mais ne doivent pas remplacer
+                    l'héritage classique, sous peine de rendre le code plus difficile à lire et à comprendre.<br>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <h5 id="ta" class="obj">EXERCICE</h5>
+                    <p class="lead" id="fg">
+                        Ce message nous indique que nous devons soit redéfinir explicitement les
+                        méthodes abstraites de la superclasse ou bien rendre notre classe Homme
+                        abstraite. Comme nous souhaitons pouvoir instancier la classe dérivée, il ne
+                        nous reste que la première solution. Redéfinissons donc ces deux classes
+                        abstraites dans chacune des classes dérivées.
+                    </p>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <h5 id="ta" class="obj">RESULTAT</h5>
+                    <div class="card" style="width: 50rem; background-color: rgb(132, 211, 213);"">
+                    <div class=" card-body">
+                        <p class="card-text lead" id="fg">
+                            &lt;?php<br>
+                            //déclaration du trait<br>
+                            trait MonTrait<br>
+                            {<br>
+                            public function Calcul_ttc($montant)<br>
+                            {<br>
+                            return $montant * 1.2; //retourne le montant TTC<br>
+                            }<br>
+                            }<br>
+                            class Facture<br>
+                            {<br>
+                            use MonTrait;<br>
+                            }<br>
+                            class Indemnite<br>
+                            {<br>
+                            use MonTrait;<br>
+                            }<br>
+                            $facture = new Facture;<br>
+                            //affichage du montant TTC de la facture<br>
+                            echo $facture->Calcul_ttc(10) . "&lt;br />";<br>
+                            $indemnite = new Indemnite;<br>
+                            //affichage du montant TTC de l'indemnité<br>
+                            echo $indemnite->Calcul_ttc(20);<br>
+                            ?><br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top:20px;margin-bottom:20px;">
+                <div class="container">
+                    <h5 id="ta" class="obj">OUTPUT DU RESULTAT</h5>
+                    <div class="card" style="width: 50rem;   background-color: rgb(132, 211, 213);">
+                        <div class="card-body">
+                            <p class="card-text lead" id="fg">
+                                12 <br>
+                                24 <br>
+                                Cela permet aux deux classes Facture et Indemnite d’utiliser la même méthode calcul_ttc sans recourir à l’héritage.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container" id="bg">
+                <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                    <p class="col-md-4 mb-0 text-muted">&copy; 2021 Groupe-4</p>
+
+                    <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                        <img src="files/img/Gtr.png" alt="logo" width="32px" height="32px">
+                    </a>
+
+                    <ul class="nav col-md-4 justify-content-end">
+                        <li class="nav-item"><a href="./index.php" class="nav-link" id="conv2" aria-current="page">Accueil</a></li>
+                        <li class="nav-item"><a href="./index.php#trouver" class="nav-link" id="conv2">Concept</a></li>
+                        <li class="nav-item"><a href="./A_propoS.php" class="nav-link" id="conv2">A propos de Groupe-4</a></li>
+                    </ul>
+                </footer>
+            </div>
+
+        </div>
+
+        <?php
+        include_once 'header.php';
+        ?>
+</body>
+
+</html>
