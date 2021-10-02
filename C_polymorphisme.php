@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<?php
+include_once 'header.php';
+?>
+
+<body>
+    <div class="container" style=" border-left: solid 2px rgb(132, 211, 213);border-right:solid 2px rgb(132, 211, 213);">
+        <div class="container" id="bbg">
+            <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                    <img src="files/img/Gtr.png" alt="logo" width="32px" height="32px">
+                    <span class="fs-4">roupe-4</span>
+                </a>
+
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a href="./index.php" class="nav-link" aria-current="page" id="conv">Accueil</a></li>
+                    <li class="nav-item act"><a href="./index.php#trouver" class="nav-link" id="conv">Concept</a></li>
+                    <li class="nav-item"><a href="./A_propoS.php" class="nav-link" id="conv">A propos de Groupe-4</a></li>
+                </ul>
+            </header>
+        </div>
+
+
+
+        <div style="text-align:center;margin-top:20px;margin-bottom:20px;">
+            <h5 id="ta" class="obj">CONCEPT DE POLYMORPHISME</h5>
+            <div class="container">
+                <div class="lead" style="text-align: justify;" id="fg">
+                    <h5 class="lead" style="font-weight: 400;text-decoration:underline;font-family:'Poppins';color:#004aad;">Qu'est-ce que le polymorphisme?</h5>
+                    Polymorphisme est un long mot pour un concept très simple.
+                    Le polymorphisme décrit un modèle de programmation orientée
+                    objet dans lequel les classes ont des fonctionnalités
+                    différentes tout en partageant une interface commune.
+                    La beauté du polymorphisme réside dans le fait que le
+                    code travaillant avec les différentes classes n'a pas
+                    besoin de savoir quelle classe il utilise, car elles
+                    sont toutes utilisées de la même manière..
+                    Une analogie du polymorphisme dans le monde réel
+                    est un bouton. Tout le monde sait utiliser un bouton: vous
+                    appliquez simplement une pression dessus. Cependant,
+                    ce qu'un bouton "fait" dépend de ce à quoi il est
+                    connecté et du contexte dans lequel il
+                    est utilisé - mais le résultat n'affecte pas la
+                    façon dont il est utilisé. Si votre patron vous
+                    demande d'appuyer sur un bouton, vous disposez
+                    déjà de toutes les informations nécessaires pour
+                    effectuer la tâche..
+                    Dans le monde de la programmation,
+                    le polymorphisme est utilisé pour
+                    rendre les applications plus modulaires
+                    et extensibles. Au lieu d'instructions
+                    conditionnelles compliquées décrivant différents
+                    plans d'action, vous créez des objets interchangeables
+                    que vous sélectionnez en fonction de vos besoins. C'est
+                    l'objectif de base du polymorphisme.<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <h5 id="ta" class="obj">EXERCICE</h5>
+                    <p class="lead" id="fg">
+                        -Créer une interface Sport avec pour methode bouger();
+                        -Créer les classes Nager,Marcher tous des implémentations de l'interface Sport possédant tous des implementation de méthode bouger();
+                        -Créer la classe sportif ayant un constructeur qui initialise son attribut nom avec des méthodes bouger(),getNom() pour récupérer le nom du sportif,
+                    </p>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <h5 id="ta" class="obj">RESULTAT</h5>
+                    <div class="card" style="width: 50rem;  background-color: rgb(132, 211, 213);">
+                        <div class="card-body">
+                            <p class="card-text lead" id="fg">
+                                interface Sport{<br>
+                                public function bouger(Sportif $sportif);<br>
+                                }<br>
+                                class Nager implements Sport {<br>
+                                public function bouger(Sportif $sportif){<br>
+                                return $sportif->getNom().' va nager';<br>
+                                }<br>
+                                }<br>
+                                class Marcher implements Sport {<br>
+                                public function bouger(Sportif $sportif){<br>
+                                return $sportif->getNom().' va marcher';<br>
+                                }<br>
+                                }<br>
+                                class Sportif{<br>
+                                private $nom;<br>
+                                public function __construct($nom){<br>
+                                $this->nom = $nom;<br>
+                                }<br>
+                                public function getNom(){<br>
+                                return $this->nom;<br>
+                                }<br>
+                                public function bouger(Sport $sport){<br>
+                                return $sport->bouger($this);<br>
+                                }<br>
+                                }<br>
+                                $dany = new Sportif("daniel");<br>
+                                $nager = new Nager();<br>
+                                echo $dany->bouger($nager);<br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container" id="bg">
+                    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                        <p class="col-md-4 mb-0 text-muted">&copy; 2021 Groupe-4</p>
+
+                        <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                            <img src="files/img/Gtr.png" alt="logo" width="32px" height="32px">
+                        </a>
+
+                        <ul class="nav col-md-4 justify-content-end">
+                            <li class="nav-item"><a href="./index.php" class="nav-link" id="conv2" aria-current="page">Accueil</a></li>
+                            <li class="nav-item"><a href="./index.php#trouver" class="nav-link" id="conv2">Concept</a></li>
+                            <li class="nav-item"><a href="./A_propoS.php" class="nav-link" id="conv2">A propos de Groupe-4</a></li>
+                        </ul>
+                    </footer>
+                </div>
+
+            </div>
+
+            <?php
+            include_once 'header.php';
+            ?>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&family=Staatliches&display=swap');
+.fs-4{
+    font-family: 'Major Mono Display', monospace;
+}
+#conv{
+    color: black;
+    font-family: 'Poppins';
+}
+#conv2{
+    color: gray;
+}
+.act{
+    border:solid 1px #004bade0;
+    border-radius: 5px;
+}
+#ta{
+    font-family:  'Major Mono Display', monospace;
+}
+#ty{
+    font-family: var(--bs-font-sans-serif);
+}
+/* #bg{
+    background-color: rgba(119, 235, 235, 0.741);
+} */
+
+.obj{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color:  rgba(55, 99, 99, 0.741);
+    text-decoration: underline overline;
+}
+.ch{
+    color: #004bade0;
+}
+#card{
+    background-color: #004bad79;
+}
+
+  #fg{
+      font-size:16px;
+      font-family: 'Montserrat';
+  }
+  #bbg{
+      background-color: rgb(132, 211, 213);
+  }
