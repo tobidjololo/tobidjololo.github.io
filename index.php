@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
-<?php
-include_once 'header.php';
-?>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="files/img/favicon.ico" type="image/x-ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="files/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Groupe-4</title>
+</head>
 
 <body>
     <div class="container" style=" border-left: solid 2px rgb(132, 211, 213);border-right:solid 2px rgb(132, 211, 213);">
@@ -14,9 +20,9 @@ include_once 'header.php';
                 </a>
 
                 <ul class="nav nav-pills">
-                    <li class="nav-item act"><a href="./index.php" class="nav-link" aria-current="page">Accueil</a></li>
+                    <li class="nav-item act"><a href="./index.html" class="nav-link" aria-current="page">Accueil</a></li>
                     <li class="nav-item"><a href="#trouver" class="nav-link" id="conv">Concept</a></li>
-                    <li class="nav-item"><a href="./A_propoS.php" class="nav-link" id="conv">A propos de Groupe-4</a></li>
+                    <li class="nav-item"><a href="./A_propoS.html" class="nav-link" id="conv">A propos de Groupe-4</a></li>
                 </ul>
             </header>
         </div>
@@ -26,22 +32,22 @@ include_once 'header.php';
                     <img src="files/img/bg.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
                 </div>
                 <div class="col-lg-6">
-                    <h1 class="display-5 fw-bold lh-1 mb-3 fs-4">PHP: Hypertext Preprocessor</h1>
-                    <p class="lead" style="text-align: justify;font-size:17px;font-family:'Montserrat';"> Le PHP est un langage de scripts généraliste et Open Source, spécialement conçu pour le développement d'applications web. Il peut être intégré facilement au HTML.Il peut également fonctionner comme n'importe quel langage interprété de façon locale. PHP est un langage impératif orienté objet.</p>
+                    <h1 class="display-5 fw-bold lh-1 mb-3 fs-4">html: Hypertext Preprocessor</h1>
+                    <p class="lead" style="text-align: justify;font-size:17px;font-family:'Montserrat';"> Le html est un langage de scripts généraliste et Open Source, spécialement conçu pour le développement d'applications web. Il peut être intégré facilement au HTML.Il peut également fonctionner comme n'importe quel langage interprété de façon locale. html est un langage impératif orienté objet.</p>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                        <a href="https://fr.wikipedia.org/wiki/PHP" class="btn btn-info">En savoir plus</a>
+                        <a href="https://fr.wikipedia.org/wiki/html" class="btn btn-info">En savoir plus</a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="container px-4 py-5" id="custom-cards">
-            <h2 class="pb-2 border-bottom fs-4" id="trouver">Quelques notions PHP</h2>
+            <h2 class="pb-2 border-bottom fs-4" id="trouver">Quelques notions html</h2>
 
             <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
                 <div class="col">
                     <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('files/img/img2.jpg');">
                         <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold fs-4"><a href="C_classe.php" style="text-decoration:none;color:whitesmoke">Concept de classe</a></h2>
+                            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold fs-4"><a href="C_classe.html" style="text-decoration:none;color:whitesmoke">Concept de classe</a></h2>
                             <ul class="d-flex list-unstyled mt-auto">
                                 <li class="me-auto">
                                     <img src="files/img/G.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
@@ -66,7 +72,7 @@ include_once 'header.php';
                 <div class="col">
                     <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('files/img/img3.jpg');">
                         <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold fs-4"><a href="C_abstraction.php" style="text-decoration:none;color:whitesmoke">Concept d'abstraction</a></h2>
+                            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold fs-4"><a href="C_abstraction.html" style="text-decoration:none;color:whitesmoke">Concept d'abstraction</a></h2>
                             <ul class="d-flex list-unstyled mt-auto">
                                 <li class="me-auto">
                                     <img src="files/img/G.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
@@ -91,7 +97,7 @@ include_once 'header.php';
                 <div class="col">
                     <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('files/img/img6.jpg');">
                         <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold fs-4"><a href="C_heritage.php" style="text-decoration:none;color:whitesmoke">Concept d'héritage</a></h2>
+                            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold fs-4"><a href="C_heritage.html" style="text-decoration:none;color:whitesmoke">Concept d'héritage</a></h2>
                             <ul class="d-flex list-unstyled mt-auto">
                                 <li class="me-auto">
                                     <img src="files/img/G.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
@@ -116,7 +122,7 @@ include_once 'header.php';
                 <div class="col">
                     <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('files/img/img4.jpg');">
                         <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold fs-4"><a href="C_encapsulation.php" style="text-decoration:none;color:whitesmoke">Concept d'encapsulation</a></h2>
+                            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold fs-4"><a href="C_encapsulation.html" style="text-decoration:none;color:whitesmoke">Concept d'encapsulation</a></h2>
                             <ul class="d-flex list-unstyled mt-auto">
                                 <li class="me-auto">
                                     <img src="files/img/G.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
@@ -141,7 +147,7 @@ include_once 'header.php';
                 <div class="col">
                     <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('files/img/img5.jpg');">
                         <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold fs-4"><a href="C_interface.php" style="text-decoration:none;color:whitesmoke">Concept d'interface</a></h2>
+                            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold fs-4"><a href="C_interface.html" style="text-decoration:none;color:whitesmoke">Concept d'interface</a></h2>
                             <ul class="d-flex list-unstyled mt-auto">
                                 <li class="me-auto">
                                     <img src="files/img/G.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
@@ -166,7 +172,7 @@ include_once 'header.php';
                 <div class="col">
                     <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('files/img/img1.jpg');">
                         <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold fs-4"><a href="C_polymorphisme.php" style="text-decoration:none;color:whitesmoke">Concept de polymorphisme</a></h2>
+                            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold fs-4"><a href="C_polymorphisme.html" style="text-decoration:none;color:whitesmoke">Concept de polymorphisme</a></h2>
                             <ul class="d-flex list-unstyled mt-auto">
                                 <li class="me-auto">
                                     <img src="files/img/G.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
@@ -191,7 +197,7 @@ include_once 'header.php';
                 <div class="col">
                     <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('files/img/img7.jpg');">
                         <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold fs-4"><a href="C_trait.php" style="text-decoration:none;color:whitesmoke">Concept de trait</a></h2>
+                            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold fs-4"><a href="C_trait.html" style="text-decoration:none;color:whitesmoke">Concept de trait</a></h2>
                             <ul class="d-flex list-unstyled mt-auto">
                                 <li class="me-auto">
                                     <img src="files/img/G.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
@@ -223,16 +229,17 @@ include_once 'header.php';
                 </a>
 
                 <ul class="nav col-md-4 justify-content-end">
-                    <li class="nav-item"><a href="./index.php" class="nav-link" id="conv2" aria-current="page">Accueil</a></li>
+                    <li class="nav-item"><a href="./index.html" class="nav-link" id="conv2" aria-current="page">Accueil</a></li>
                     <li class="nav-item"><a href="#trouver" class="nav-link" id="conv2">Concept</a></li>
-                    <li class="nav-item"><a href="./A_propoS.php" class="nav-link" id="conv2">A propos de Groupe-4</a></li>
+                    <li class="nav-item"><a href="./A_propoS.html" class="nav-link" id="conv2">A propos de Groupe-4</a></li>
                 </ul>
             </footer>
         </div>
     </div>
-    <?php
-    include_once 'header.php';
-    ?>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<script src="files/js/main.js"></script>
 
+</body>
 </html>
